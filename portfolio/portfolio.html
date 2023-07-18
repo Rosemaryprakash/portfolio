@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+        <div id="portfolio">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="myportfolio.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <br><br><br><br>
+                <h1 class="sub-title">My work</h1> 
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/img1">
+                        <div class="layer">
+                            <h3>C project</h3>
+                            <p>C project on undo and redo operation</p>
+                            <a href="https://github.com/Rosemaryprakash/C/blob/e9f9e363a0e21430c70b540718b36c8abfcd28f2/project%20s1.c"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/img2.jpg" >
+                        <div class="layer">
+                            <h3>Java Project</h3>
+                            <p>Java project on food delivery</p>
+                            <a href="https://github.com/Rosemaryprakash/Java-project"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/img3.jpg" >
+                        <div class="layer">
+                            <h3>Coursera certificate</h3>
+                            <p>Machine Learning Foundations: A Case Study Approach</p>
+                            <a href="https://drive.google.com/file/d/1ZamRuG1LQ95-l27uK7dWmh1tFGtSDSRT/view?usp=drive_link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links"); 
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+        
+        
+            
+            <script>
+                const scriptURL = '<https://script.google.com/macros/s/AKfycby8kWZwCCLp7VgIdLTZi7diH3LUvO8MJcDlJodt1KIQ-Ho6-dIqk7asuM6HJ8Q8mKG7zQ/exec>'
+                const form= document.forms['submit-to-google-sheet']
+        
+                form.addEventListener('submit',e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', erorr.message))
+                })
+            </script>
+<body>
+    
+</body>
+</html>
